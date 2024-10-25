@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333; /* Ensure text is readable */
+        }
+        
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        #profile-image {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        #profile-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .bg-gradient {
+            background: linear-gradient(135deg, rgba(243, 229, 245, 0.8), rgba(225, 190, 231, 0.8));
+        }
+        .hover-shadow:hover {
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+        .footer-gradient {
+            background: linear-gradient(135deg, rgba(106, 27, 154, 0.9), rgba(142, 36, 170, 0.9));
+        }
+    </style>
+</head>
+
+
+<!-- Navbar -->
+<nav class="p-6 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Debangan Mandal</h1>
+        <ul class="flex space-x-4">
+            <li><a href="#about" class="hover:text-gray-400">About</a></li>
+            <li><a href="#education" class="hover:text-gray-400">Education</a></li>
+            <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+            <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+            <li><a href="#achievements" class="hover:text-gray-400">Achievements</a></li>
+            <li><a href="#certificates" class="hover:text-gray-400">Certificates</a></li>
+            <li><a href="new_resume.pdf" class="hover:text-gray-400 bg-blue-500 text-white py-2 px-4 rounded-lg" download>Download Resume</a></li>
+            <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- About Section with Image Upload -->
+<section id="about" class="py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center text-center lg:text-left">
+        <!-- Profile Image and Description -->
+        <div class="lg:w-1/2 lg:pr-10">
+            <!-- Profile Image Upload -->
+            <div class="relative">
+                <img id="profile-image" class="w-72 h-72 rounded-full object-cover border-4 border-gray-300 shadow-lg transition-transform duration-300 transform hover:scale-110" src="DPpic.jpeg" alt="Profile Image">
+                <input type="file" id="image-upload" accept="image/*" class="absolute top-0 left-0 w-48 h-48 opacity-0 cursor-pointer">
+            </div>
+            <!-- Text Description -->
+            <h2 class="text-4xl font-bold mt-6">About Me</h2>
+            <p class="text-lg mt-4 leading-relaxed">I am a driven M.Tech student majoring in Computer Science and Engineering at Lovely Professional University. With 4 years of experience in programming languages like C, C++, Python, Java, and R, I possess strong problem-solving skills and a keen interest in data analytics. Whether collaborating in a team or working independently, I am committed to delivering high-quality results.</p>
+        </div>
+        <!-- Highlights -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0">
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4">Key Highlights</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-semibold">Programming Knowlegde:</span>Efficient  in languages such as Python, R, C++, and Java.</li>
+                    <li><span class="font-semibold">Analytical Skills:</span> Strong background in data analytics and problem-solving.</li>
+                    <li><span class="font-semibold">Team Player:</span> Effective in both collaborative and independent work environments.</li>
+                    <li><span class="font-semibold">Passionate Learner:</span> Committed to continuous learning and professional development.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Qualification Section -->
+<section id="education" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Education Qualification</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                <h3 class="text-2xl font-semibold mb-4">M.Tech in Computer Science and Engineering</h3>
+                <p>Lovely Professional University, India<br>
+                Studying</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                <h3 class="text-2xl font-semibold mb-4">B.Tech in Computer Science and Engineering(Hons.)</h3>
+                <p>Lovely Professional University, India<br>
+                Graduated: 2024</p>
+            </div>
+            <!-- Add more educational qualifications here if needed -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Programming Languages</h3>
+                    <p>Python, R, SQL, C++, JavaScript</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Data Visualization Tools</h3>
+                    <p>Tableau, Power BI, Matplotlib, Seaborn</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Data Analytics</h3>
+                    <p>Pandas, NumPy, Scikit-learn, Excel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Project 1: Banking System</h3>
+                    <p> • Created a robust Banking System using Object-Oriented Programming. 
+                        • Implemented core functionalities: withdrawal, deposit, and money transfer.
+                        • Added features for account creation, phone number management, and PIN setup.
+                    </p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Project 2: Movie Recommendation System</h3>
+                    <p> • Developed a content-based movie recommendation system utilizing NLP techniques in Python.
+                        • Analyzed movie descriptions and user preferences to generate personalized recommendations.
+                        • Incorporated NLP methodologies to extract and analyze textual features for enhanced recommendation accuracy.
+                    </p>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Project 3: Interactive Dashboard</h3>
+                    <p> • Created an interactive dashboard in Tableau to enable easy data investigation and manipulation. 
+                        • Filtered out irrelevant data and optimized the dataset for readability by non-technical users. 
+                        • The dataset is linked across multiple Excel sheets, allowing changes in one sheet to automatically update and reflect in other linked sheets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 bg-gradient">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Achievement 1: Active Participation in Coding Competitions</h3>
+                    <p> Consistently engage in coding competitions on platforms such as LeetCode and HackerRank, honing problem-solving skills and algorithmic proficiency while consistently achieving commendable results.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Achievement 2: Research Paper publication</h3>
+                    <p> Co-authored a research paper in the field of Data Science, contributing insights to advance knowledge in the domain and showcasing analytical and writing skills.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Achievement 3: Databricks Participation</h3>
+                    <p> Certified in Databricks platform, showcasing advanced proficiency in big data processing, analytics, and management techniques, essential for driving data-driven insights and decision-making.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Certificate 1: R-programming-coursera</h3>
+                    <p> • Currently enrolled in a rigorous Coursera course focusing on R programming language, exploring its applications across various problem domains and projects, alongside hands-on experience with swirls.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Certificate 2: Advanced python programming</h3>
+                    <p> • Completed an intensive program on the E-Box platform, covering comprehensive topics including Object-Oriented Programming in Python, further enhancing proficiency in Python programming.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-shadow">
+                    <h3 class="text-2xl font-semibold mb-4">Certificate 3: Tableau for Data Science</h3>
+                    <p> • Achieved certification in Tableau for Data Science, enhancing skills in data visualization and dashboard creation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Contact</h2>
+            <p class="text-lg mb-8">Interested in collaborating or learning more? Reach out to me below!</p>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Email">
+                </div>
+                <div class="mb-4">
+                    <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-gradient text-white py-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+                <p>Email: <a href="mailto:debanganm1@gmail.com" class="hover:text-gray-400">debanganm1@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 9205865344" class="hover:text-gray-400">+91 9205865344</a></p>
+                <p>Address: Natun Pally, Kalabagan, East Khagrabari, Cooch Behar, West Bengal, 736101</p>
+            </div>
+    
+            <div class="flex space-x-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/debangan-mandal57/" target="_blank" class="hover:text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 00-12 0v7a6 6 0 0012 0V8z" />
+                    </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Debanganm57" target="_blank" class="hover:text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v22M1 12h22M12 12L4.5 4.5M12 12l7.5-7.5M12 12l7.5 7.5M12 12L4.5 19.5" />
+                    </svg>
+                </a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/your-twitter-profile" target="_blank" class="hover:text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 19V5a7 7 0 0114 0v14a7 7 0 01-14 0V5m14 0v14a7 7 0 01-14 0V5m0 0V5" />
+                    </svg>
+                </a>
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.com/citations?hl=en&user=lh_uaD8AAAAJ" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Google_Scholar_logo.svg" class="h-6 w-6" alt="Google Scholar">
+                </a>
+                <!-- ResearchGate -->
+                <a href="https://www.researchgate.net/profile/Debangan-Mandal-2" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" class="h-6 w-6" alt="ResearchGate">
+                </a>
+                <!-- ORCID -->
+                <a href="https://orcid.org/my-orcid?orcid=0009-0003-6045-4450" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" class="h-6 w-6" alt="ORCID">
+                </a>
+                <!-- Academia.edu -->
+                <a href="https://independent.academia.edu/MandalDebangan" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Academia.edu_logo.svg" class="h-6 w-6" alt="Academia.edu">
+                </a>
+                <!-- Publons -->
+                <a href="https://www.webofscience.com/wos/author/record/LNR-5239-2024" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Publons_logo.svg" class="h-6 w-6" alt="Publons">
+                </a>
+                <!-- Mendeley -->
+                <a href="https://www.mendeley.com/search/" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Mendeley_Logo.svg" class="h-6 w-6" alt="Mendeley">
+                </a>
+                <!-- Zotero -->
+                <a href="https://www.zotero.org/debangan_mandal" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Zotero-icon.svg" class="h-6 w-6" alt="Zotero">
+                </a>
+                <!-- arXiv -->
+                <a href="https://arxiv.org/user/" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/ArXiv_logo.svg" class="h-6 w-6" alt="arXiv">
+                </a>
+                <!-- Figshare -->
+                <a href="https://figshare.com/account/profile" target="_blank" class="hover:text-gray-400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Figshare_logo.svg" class="h-6 w-6" alt="Figshare">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
